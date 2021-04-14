@@ -3,6 +3,8 @@ name: ffc-helm-only-example
 namespace: ffc-demo
 workstream: ffc-demo
 
+labels: {}
+
 ingress:
   class: nginx
   endpoint: ffc-demo
