@@ -4,7 +4,9 @@ import uk.gov.defra.ffc.Version
 
 def pr = ''
 def repoName = ''
+String tag = ''
 String defaultBranch = 'main'
+String environment = 'snd'
 
 node {
   try {
@@ -12,12 +14,19 @@ node {
         deleteDir()
       }
 
-      stage('Checkout source code') {
-        build.checkoutSourceCode(defaultBranch)
+    stage('Checkout source code') {
+      build.checkoutSourceCode(defaultBranch)
+    }
+
+    stage('Set PR and tag variables') {
+        def version = version.getPackageJsonVersion()
+        (repoName, pr, tag, mergedPrNo) = build.getVariables(version, defaultBranch)
       }
 
-    stage('Set PR and version variables') {
-      (repoName, pr) = build.getVariables('', defaultBranch)
+    if (pr != '') {
+      stage('Verify version incremented') {
+        version.verifyPackageJsonIncremented(defaultBranch)
+      }
     }
 
     if (pr != '') {
