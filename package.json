@@ -1,0 +1,15 @@
+{
+  "name": "ffc-helm-only-example",
+  "description": "Helm example without an image.",
+  "version": "4.25.0",
+  "homepage": "https://github.com/DEFRA/ffc-helm-only-example",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DEFRA/ffc-helm-only-example.git"
+  },
+  "author": "Defra DDTS",
+  "contributors": [
+    "Fay Toward fay.toward@rpa.gov.uk",
+    "Steve Hunt steven.hunt@defra.gov.uk"
+  ]
+}
