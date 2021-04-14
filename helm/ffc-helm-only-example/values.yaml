@@ -7,7 +7,7 @@ labels: {}
 
 ingress:
   class: nginx
-  endpoint: ffc-demo
+  endpoint: ffc-helm-only-example
   server: example.com
   type: master
 
