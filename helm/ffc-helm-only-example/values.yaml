@@ -1,0 +1,7 @@
+environment: development
+name: ffc-helm-only-example
+namespace: ffc-demo
+workstream: ffc-demo
+
+ingress:
+  type: master

@@ -1,0 +1,2 @@
+{{-define "ffc-helm-only-example.azure-ingress" -}}
+{{- end -}}
