@@ -1,5 +1,5 @@
 {{- include "ffc-helm-library.azure-ingress" (list . "ffc-helm-only-example.ingress") -}}
-{{- define "ffc-helm-only-example" -}}
+{{- define "ffc-helm-only-example.ingress" -}}
 metadata:
   annotations:
     {{- if .Values.secret.auth }}
