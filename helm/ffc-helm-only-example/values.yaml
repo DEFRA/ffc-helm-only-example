@@ -4,4 +4,15 @@ namespace: ffc-demo
 workstream: ffc-demo
 
 ingress:
+  class: nginx
+  endpoint: ffc-demo
+  server: example.com
   type: master
+
+service:
+  port: 80
+  type: ClusterIP
+
+secret:
+  name: ffc-demo-basic-auth
+  type: Opaque
