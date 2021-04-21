@@ -1,4 +1,4 @@
-@Library('defra-library@v-9') _
+@Library('defra-library@psd-1248-support-image-without-helm') _
 
 import uk.gov.defra.ffc.Version
 
