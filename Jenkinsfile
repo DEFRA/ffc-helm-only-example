@@ -1,3 +1,3 @@
-@Library('defra-library@psd-1248-support-image-without-helm') _
+@Library('defra-library@v-9') _
 
 buildHelm()
